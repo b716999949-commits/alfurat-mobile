@@ -1,0 +1,53 @@
+/* Alfurat Mobile V3 — optional presentation layer. No API or data changes. */
+:root{--v3-deep:#071a32;--v3-lime:#b9f53a;--v3-ink:#102b4c;--v3-line:rgba(100,135,158,.2);--v3-ease:cubic-bezier(.2,.75,.25,1)}
+html{scroll-padding-top:calc(var(--v3-header,89px) + 14px)}
+.v3-icon{width:23px;height:23px;display:inline-block;flex:none;vertical-align:middle;overflow:visible;stroke:none!important;fill:none!important}
+.v3-icon .v3-stroke{stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round;fill:none}
+.v3-icon .v3-fill{fill:currentColor;opacity:.16;stroke:none}
+.v3-icon .v3-accent{fill:#a7e837;stroke:none}
+.v3-progress{position:absolute;bottom:0;right:0;height:3px;width:100%;transform:scaleX(0);transform-origin:right;background:linear-gradient(90deg,#25c9e8,#b9f53a);pointer-events:none;z-index:2}
+.site-header{background:linear-gradient(125deg,rgba(7,24,48,.97),rgba(15,43,65,.96));box-shadow:0 12px 30px #071b3226;transition:box-shadow .25s}
+.site-header.v3-scrolled{box-shadow:0 15px 45px #071b3240}
+.desktop-nav{gap:clamp(5px,1.05vw,17px)}
+.desktop-nav a{display:flex;align-items:center;gap:6px;padding:9px 10px;border:1px solid transparent;border-radius:12px;white-space:nowrap;transition:background .25s,color .25s,border-color .25s}
+.desktop-nav a .v3-icon{width:19px;height:19px;color:#afc9dc}
+.desktop-nav a.active,.desktop-nav a:hover{background:#d9f4ff12;border-color:#d9f4ff25;color:#fff}
+.desktop-nav a.active .v3-icon{color:var(--v3-lime)}
+.desktop-nav a:after{bottom:2px;right:25%;width:0;height:2px;border-radius:3px}
+.desktop-nav a.active:after{width:50%}
+.mobile-menu a{display:flex;align-items:center;gap:12px;border-radius:12px;transition:background .2s}
+.mobile-menu a[aria-current=location]{background:#c2f66416;color:var(--v3-lime)}
+.mobile-bottom-nav{background:rgba(8,28,48,.97);border-top:1px solid #c0e6ff28;box-shadow:0 -12px 30px #091a3520;padding-bottom:max(8px,env(safe-area-inset-bottom))}
+.mobile-bottom-nav a,.mobile-bottom-nav button{position:relative;color:#d6e5f1;transition:color .22s,background .22s;border-radius:13px;margin:5px 3px;min-height:48px}
+.mobile-bottom-nav a.selected{color:var(--v3-lime);background:#c2f66413}
+.mobile-bottom-nav .v3-icon{width:25px;height:25px}
+.category-card{isolation:isolate;position:relative;overflow:hidden;border:1px solid var(--v3-line);box-shadow:0 10px 28px #102b4c0c;transition:transform .32s var(--v3-ease),box-shadow .32s,border-color .32s}
+.category-icon-wrap{position:relative;isolation:isolate;perspective:700px}
+.category-icon-wrap:before{content:'';position:absolute;inset:9%;z-index:-1;border-radius:38%;background:radial-gradient(ellipse at 50% 40%,#fff 0%,transparent 72%);opacity:.8;pointer-events:none}
+.category-realistic-device{filter:drop-shadow(0 13px 8px #102b4c24);transform:translateZ(0);transition:transform .42s var(--v3-ease),filter .42s}
+.category-card:hover,.category-card:focus-visible{transform:translateY(-4px);border-color:#9bc955;box-shadow:0 18px 38px #102b4c18}
+.category-card:hover .category-realistic-device,.category-card:focus-visible .category-realistic-device{transform:translateY(-5px) rotate(-5deg) scale(1.06);filter:drop-shadow(0 20px 10px #102b4c30)}
+.product-card,.featured-card,.video-card,.social-card{transition:transform .32s var(--v3-ease),box-shadow .32s,border-color .32s;border-radius:22px}
+.product-card:hover,.featured-card:hover{transform:translateY(-5px);box-shadow:0 20px 46px #0d294a1c;border-color:#98ce59}
+.product-img-real,.featured-photo img{transition:transform .45s var(--v3-ease)}
+.product-card:hover .product-img-real,.featured-card:hover .featured-photo img{transform:scale(1.035)}
+.btn,.icon-btn,.primary-btn,.secondary-btn{transition:transform .22s var(--v3-ease),box-shadow .22s,background .22s,border-color .22s}
+.btn:active,.icon-btn:active,.primary-btn:active,.secondary-btn:active,.category-card:active{transform:scale(.97)}
+:where(a,button,input,textarea,select):focus-visible{outline:3px solid #80c72b;outline-offset:3px}
+.v3-backtop{position:fixed;inset-inline-end:19px;bottom:24px;width:46px;height:46px;display:grid;place-items:center;border-radius:15px;background:#102e4e;color:#b9f53a;border:1px solid #ffffff33;box-shadow:0 8px 22px #071a3240;z-index:59;transition:opacity .2s,transform .2s}
+.v3-backtop[hidden]{display:none!important}
+.v3-backtop:hover{transform:translateY(-3px)}
+/* Admin matches the storefront palette; existing navigation and forms are unchanged. */
+.admin-layout .sidebar{background:linear-gradient(155deg,#081a32,#103450)}
+.admin-layout .side-link{border:1px solid transparent;transition:background .2s,color .2s,border-color .2s}
+.admin-layout .side-link.active{background:#b9f53a19;border-color:#b9f53a40;color:#d3ff86}
+.admin-layout .side-link .side-icon{display:grid;place-items:center;width:27px;height:27px}
+.admin-layout .side-link .v3-icon{width:22px;height:22px}
+.admin-layout .side-link.active .v3-icon{color:#b9f53a}
+.admin-layout .primary-btn,.login-card .primary-btn{background:linear-gradient(120deg,#b9f53a,#92d92d);color:#102b32;box-shadow:0 8px 22px #8abd3426}
+.admin-layout .admin-section.active{animation:v3-section .3s var(--v3-ease) both}
+@keyframes v3-section{from{opacity:.3;transform:translateY(7px)}to{opacity:1;transform:none}}
+@media(max-width:1150px){.desktop-nav a{gap:4px;padding-inline:5px}.desktop-nav a .v3-icon{width:16px;height:16px}}
+@media(max-width:760px){.v3-backtop{bottom:calc(85px + env(safe-area-inset-bottom));width:40px;height:40px}.category-card,.product-card,.featured-card{border-radius:17px}.mobile-bottom-nav a,.mobile-bottom-nav button{margin:3px 2px}.mobile-bottom-nav .v3-icon{width:23px;height:23px}}
+@media(hover:none){.category-card:hover,.product-card:hover,.featured-card:hover{transform:none}.category-card:hover .category-realistic-device,.product-card:hover .product-img-real{transform:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.reveal{opacity:1!important;transform:none!important}}
