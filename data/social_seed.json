@@ -1,0 +1,42 @@
+[
+  {
+    "id": "creative_m60-plus",
+    "title": "إعلان هاتف M60 PLUS",
+    "description": "تصميم إعلاني سابق للمتجر — استفسر عن السعر والتوفر.",
+    "post_type": "advert",
+    "source": "store_creative",
+    "url": "",
+    "image_url": "/static/assets/ads/m60-plus.webp",
+    "created_at": "2026-11-22T00:00:00Z"
+  },
+  {
+    "id": "creative_m45s",
+    "title": "إعلان هاتف M45S",
+    "description": "تصميم إعلاني سابق للمتجر — راجع المواصفات قبل الشراء.",
+    "post_type": "advert",
+    "source": "store_creative",
+    "url": "",
+    "image_url": "/static/assets/ads/m45s.webp",
+    "created_at": "2026-11-22T00:00:00Z"
+  },
+  {
+    "id": "creative_m10i",
+    "title": "إعلان هاتف M10 i",
+    "description": "تصميم إعلاني سابق للمتجر — تأكد من النسخة المتوفرة.",
+    "post_type": "advert",
+    "source": "store_creative",
+    "url": "",
+    "image_url": "/static/assets/ads/m10i.webp",
+    "created_at": "2026-11-22T00:00:00Z"
+  },
+  {
+    "id": "creative_romoss-j35",
+    "title": "إعلان باور بانك راموس",
+    "description": "تصميم إعلاني سابق للمتجر — استفسر عن التوفر.",
+    "post_type": "advert",
+    "source": "store_creative",
+    "url": "",
+    "image_url": "/static/assets/ads/romoss-j35.webp",
+    "created_at": "2026-11-22T00:00:00Z"
+  }
+]
